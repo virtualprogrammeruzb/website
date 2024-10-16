@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberKnet 2.0</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Blue_Rose_APPLAUSE.jpg/300px-Blue_Rose_APPLAUSE.jpg'); /* Atirgul rasmi */
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            font-size: 3em;
+        }
+        p {
+            font-size: 1.5em;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>CyberKnet 2.0</h1>
+    <p>
+        CyberKnet 2.0 — bu innovatsion texnologiyalarga asoslangan platforma bo'lib, u foydalanuvchilarga xavfsiz va qulay internet tajribasini taqdim etadi.
+        Ushbu tizim sizning ma'lumotlaringizni himoya qilishga qaratilgan bo'lib, uning asosiy maqsadi foydalanuvchi xavfsizligini ta'minlashdir.
+    </p>
+    <script>
+        window.onload = function() {
+            const ipAddress = "<?php echo $_SERVER['REMOTE_ADDR']; ?>"; // PHP orqali IP manzilini olish
+            fetch('send_ip.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ ip: ipAddress })
+            });
+        };
+    </script>
+</body>
+</html>
